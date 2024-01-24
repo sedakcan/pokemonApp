@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pokemon_navigation"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.sedakcan.pokemons.view.FeedFragment">
+        <action
+            android:id="@+id/action_feedFragment_to_pokemonFragment"
+            app:destination="@id/pokemonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonFragment"
+        android:name="com.sedakcan.pokemons.view.PokemonFragment"
+        tools:layout="@layout/fragment_pokemon">
+        <action
+            android:id="@+id/action_pokemonFragment_to_feedFragment"
+            app:destination="@id/feedFragment"
+            app:popUpTo="@id/pokemon_navigation"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="pokemonUuid"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="pokemonName"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>

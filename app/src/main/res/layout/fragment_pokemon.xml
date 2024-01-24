@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <data>
+                <variable
+                    name="selectedPokemon"
+                    type="com.sedakcan.pokemons.model.Pokemon" />
+        </data>
+        <ScrollView
+            android:id="@+id/scrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".view.PokemonFragment"
+                    android:paddingBottom="8dp">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/glInsideOuter1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.25" />
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/glInsideOuter2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.75" />
+
+                        <ImageView
+                            android:id="@+id/ivPokemon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:downloadUrl="@{selectedPokemon.pokemonImageUrl}"
+                            app:layout_constraintEnd_toStartOf="@+id/glInsideOuter2"
+                            app:layout_constraintStart_toStartOf="@+id/glInsideOuter1"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvPokemonDescription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="@{selectedPokemon.pokemonDescription}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ivPokemon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+</layout>
