@@ -4,16 +4,14 @@ POKEMONS APP
 
 ## Using Libraries 
 
-Navigation kütüphanesi, app'in içinde daha düzgün geçişler yapmayı sağlamaktadır.
+The navigation library facilitates smoother transitions within the app.
 
-Material designla ilgili şeyleri daha iyi yapmamızı sağlıyor.
+The Material library enables us to better handle design-related elements.
 
-Retrofit, internetten veri çekmeyi, bu veriyi işlemeyi, veriyi asyncronous bir şekilde arka planda çekmeye 
-olanak sağlar.
+The Retrofit library allows fetching data from the internet, processing it, and provides the opportunity to asynchronously fetch data in the background.
 
-RXJava, Retrofit'in tamamlayıcı kütüphanesidir. İşlemler kompleksleştikçe bize yardımcı olur.
+The RXJava library is a complementary library to Retrofit. It assists us as operations become more complex.
 
-Glide internetten görselleri çekip gösterdiğimiz bir kütüphanedir.
+The Glide library is used for fetching and displaying images from the internet.
 
-Preference'da Jetpack kütüphanelerinden bir tanesidir. Kullanıcıların tercihlerini hatırlamak için kullanılan 
-bir kütüphanedir.
+The Preference library is one of the Jetpack libraries. It is used for remembering user preferences.
